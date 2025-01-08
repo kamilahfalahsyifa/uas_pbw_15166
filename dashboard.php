@@ -10,8 +10,15 @@ $jumlah_article = $hasil1->num_rows;
 $sql2 = "SELECT * FROM gallery ORDER BY tanggal DESC";
 $hasil2 = $conn->query($sql2);
 
-//menghitung jumlah baris data gallery
+//menghitung jumlah baris data user
 $jumlah_gallery = $hasil2->num_rows;
+
+//query untuk mengambil data user
+$sql3 = "SELECT * FROM user ORDER BY username DESC";
+$hasil3 = $conn->query($sql3);
+
+//menghitung jumlah baris data user
+$jumlah_user = $hasil3->num_rows;
 ?>
 <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center pt-4">
     <div class="col">
@@ -31,7 +38,7 @@ $jumlah_gallery = $hasil2->num_rows;
         </a>
     </div> 
     <div class="col">
-        <a href="index.php?#gallery" class="text-decoration-none">
+        <a href="admin.php?page=gallery" class="text-decoration-none">
         <div class="card border border-primary mb-3 shadow" style="max-width: 18rem;">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
@@ -40,6 +47,22 @@ $jumlah_gallery = $hasil2->num_rows;
                     </div>
                     <div class="p-3">
                         <span class="badge rounded-pill text-bg-primary fs-2"><?php echo $jumlah_gallery; ?></span>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        </a>
+    </div> 
+    <div class="col">
+        <a href="admin.php?page=user" class="text-decoration-none">
+        <div class="card border border-primary mb-3 shadow" style="max-width: 18rem;">
+            <div class="card-body">
+                <div class="d-flex justify-content-between">
+                    <div class="p-3">
+                        <h5 class="card-title"><i class="bi bi-person-circle"></i> User</h5> 
+                    </div>
+                    <div class="p-3">
+                        <span class="badge rounded-pill text-bg-primary fs-2"><?php echo $jumlah_user; ?></span>
                     </div> 
                 </div>
             </div>
