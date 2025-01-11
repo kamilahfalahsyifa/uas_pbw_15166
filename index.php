@@ -348,7 +348,7 @@ include "koneksi.php";
         ></a>
       </div>
       <div class="text-center mt-1 mb-2">
-        <h6>Kamilah Falah Syifa © 2024</h6>
+        <h6>Kamilah Falah Syifa © 2025</h6>
       </div>
     </footer>
     <!-- FOOTER END -->
